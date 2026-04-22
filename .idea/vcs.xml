@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Gaussian-Process" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/NUCML-Next" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/exfor_master" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nudel" vcs="Git" />
+  </component>
+</project>

@@ -1,0 +1,701 @@
+Retrieved by E4-Web: 2025/10/09,12:03:56                             1 0  0    0
+ 9.223800+4 2.360058+2          1          1          0          19237 1451    1
+ 0.000000+0 0.000000+0          0          0          0          69237 1451    2
+ 1.000000+0 3.000000+7          1          0         10          89237 1451    3
+ 0.000000+0 0.000000+0          0          0        574          29237 1451    4
+ 92-U -238 IAEA/ORNL  EVAL-MAR23 INDEN Consortium, ORNL, LANL     9237 1451    5
+ NDS XXX (2025)       DIST-AUG24 REV1-NOV23            20240830   9237 1451    6
+---- ENDF/B-VIII.1    MATERIAL 9237         REVISION 1            9237 1451    7
+----- INCIDENT-NEUTRON DATA                                       9237 1451    8
+------ ENDF-6                                                     9237 1451    9
+****************************************************************  9237 1451   10
+                                                                  9237 1451   11
+Changes in ENDF/B-VIII.1, see B81 big paper(NUCL DATA SHEETS 2025)9237 1451   12
+                                                                  9237 1451   13
+ RRR: JENDL-5 RRR adopted to improve depletion behaviour          9237 1451   14
+ Changes in nubar driven by new LANL evaluation + INDEN insights  9237 1451   15
+ PFNS: JENDL-4 adopted from 5-8 MeV(in B8 JENDL-4 adopted En>8MeV)9237 1451   16
+INDEN file: u238e80u8V03i4 MAR23                                  9237 1451   17
+*** Remove correlations with RRR ***  (A. Trkov 18 Jan 2023)      9237 1451   18
+*** RRR from ENDF/B-VII.1 + bgnd(n,f) *** (A. Trkov 2 Nov 2021)   9237 1451   19
+                                                                  9237 1451   20
+****************************************************************  9237 1451   21
+Basis evaluation (ENDF/B-VIII.0):                                 9237 1451   22
+ 92-U -238 IAEA       EVAL-DEC14 IAEA Consortium                  9237 1451   23
+ NDS 148, 1 (2018)    DIST-AUG24 REV1-NOV23            20240830   9237 1451   24
+****************************************************************  9237 1451   25
+Source data included in the evaluation                            9237 1451   26
+Version    u238ib58lrlFsfaST4q                                    9237 1451   27
+Source     Roberto\ib58\u238.out                                  9237 1451   28
+Resonance  IRMM\238U_H20-43_adopNG3+INL46+TOT+NF_12.end           9237 1451   29
+Delayed    Resonance\U238_dlyd_e71.end                            9237 1451   30
+Fission    Resonance\U238_fissp_Talou_J40p.end                    9237 1451   31
+Fission xs Resonance\U238_fisxsonly_e71.end                       9237 1451   32
+Mod.Fis.xs Resonance\u238_STD-2017-final-11Feb17-vp.cur           9237 1451   33
+Mod.urr.xs Resonance\u238_STD-2017-final-11Feb17-vp_irmm_bgfis.cur9237 1451   34
+Nubar tune nubarp.inp                                             9237 1451   35
+Fiss.E     Resonance\fis_energy.endf                              9237 1451   36
+Fiss.gamma Fission_gamma\u8-mf6mt18-pnu-ng_Ionel20171116.endf     9237 1451   37
+Covariance Covariance\u238_cov_q.endf                             9237 1451   38
+Inel.Covar Covariance\u238_cov-inel.endf                          9237 1451   39
+                                                                  9237 1451   40
+General information for Version u238ib58lrlFsfaST4q :             9237 1451   41
+- The basis for cross sections in the fast energy range is        9237 1451   42
+  the Empire ib58 calculation.                                    9237 1451   43
+- The IRMM Resonance file is 238U_H20-43_adopNG3+INL46+TOT+NF_12  9237 1451   44
+  with new resolved/unresolved resonance evaluation.              9237 1451   45
+- Capture cross sections are from Standards-2017 up to 2.2 MeV    9237 1451   46
+- Fission cross corresponds to Standards-2017.                    9237 1451   47
+  In the resolved resonance range some background is added so     9237 1451   48
+  that the fission cross section after resolution broadening      9237 1451   49
+  approximately matches the low-resolution Slovacek data.         9237 1451   50
+- PFNS is as provided by P. Talou for the IAEA CRP on PFNS        9237 1451   51
+  of Actinides. The duplicate entry at 5 MeV is removed (the      9237 1451   52
+  second set is retained). PFNS at 8 MeV and above are taken      9237 1451   53
+  from the JENDL-4.0 evaluation because ENDF/B-VII.1 data have    9237 1451   54
+  have unphysical behaviour, manifested in a decline of E_aver.   9237 1451   55
+- Angular distributions are entirely from the Empire calculation. 9237 1451   56
+- Prompt fission gamma multiplicities were evaluated by           9237 1451   57
+  I. Stetcu (LANL, November 16, 2017). Based on Ref. [Leb2015],   9237 1451   58
+  it was assumed that the U-235 and U-238 multiplicities are      9237 1451   59
+  proportional to each other. Hence, the shape of the             9237 1451   60
+  energy dependence of the average multiplicity for U-238 was     9237 1451   61
+  taken from U5, and rescaled so that the total gamma production  9237 1451   62
+  at 14.3 MeV reproduces Drake [Dr1978]                           9237 1451   63
+  [Leb2017] M.Lebois et. al., Phys. Rev. C 92, 034618 (2015)      9237 1451   64
+  [Dr1978] D.M.Drake, E.D.Arthur, M.G.Silbert,                    9237 1451   65
+  Nuclear Science and Engineering, Vol.65, p.49 (1978)            9237 1451   66
+- The PFGS is based on the JEFF-3.3 (ver T3) evaluation up to     9237 1451   67
+  1 MeV outgoing gamma energies. From 1 MeV up, the spectrum is   9237 1451   68
+  continuous with the u235 spectrum. The same spectrum was used   9237 1451   69
+  for the whole incident neutron energy range.                    9237 1451   70
+- Fission neutron and gamma photon probabilities in the new       9237 1451   71
+  MF 6 format are included.                                       9237 1451   72
+- Covariances in the resonance region are taken from JEFF-3.3,    9237 1451   73
+  including elastic, fission, capture and the corresponding       9237 1451   74
+  cross-reaction covariances. To correct for the "hole" in        9237 1451   75
+  the uncertainty of the elastic cross section, a 4 percent       9237 1451   76
+  uncertainty is added in the range 100 eV - 3 keV.               9237 1451   77
+  The total is defined as the sum of the partials.                9237 1451   78
+- The covariance matrix prior for the cross sections and          9237 1451   79
+  Legendre coefficients of the angular distributions above        9237 1451   80
+  the resolved resonance range is generated using the Monte       9237 1451   81
+  Carlo technique by statistical sampling of the model            9237 1451   82
+  parameter in the Empire calculations. About 3000 ENDF           9237 1451   83
+  files were generated in the process. The first discrete         9237 1451   84
+  inelastic cross section is treated explicitly while all         9237 1451   85
+  the others are lumped into MT 851. Similarly, absorption        9237 1451   86
+  reactions MT649 and MT800 are lumped into MT 852. This          9237 1451   87
+  is necessary to preserve unitarity without defining the         9237 1451   88
+  covariances for each reaction channel separately.               9237 1451   89
+- The final covariance matrices for all reactions (including      9237 1451   90
+  cross reaction correlations) were obtained by the generalised   9237 1451   91
+  least-squares method in the GANDR system using measured         9237 1451   92
+  data from the EXFOR data base, except for fission and           9237 1451   93
+  capture, in which case the Standards-2017 were input            9237 1451   94
+  to GANDR instead of the experimental data.                      9237 1451   95
+  Experimental data marked with * were renormalized to the        9237 1451   96
+  IRDFF-1.05 cross sections @ https://www-nds.iaea.org/IRDFF/.    9237 1451   97
+                                                                  9237 1451   98
+  Selected data for fitting the total were the following:         9237 1451   99
+       Author               Year  EXFOR entry & subentry          9237 1451  100
+   11. Yu.V.Grigoriev,      (90)  X4 41154  2 (E>15 keV)          9237 1451  101
+   25. I.Tsubone,ET.AL.     (84)  X4 21813  2                     9237 1451  102
+   26. W.P.POENITZ,ET.AL.   (81)  X4 10935  7                     9237 1451  103
+   39. R.B.Schwartz,ET.AL.  (74)  X4 10280  6 (every 2-nd point)  9237 1451  104
+   44. R.Batchelor,ET.AL.   (65)  X4 21019 13                     9237 1451  105
+   45. M.BABA,ET.AL.        (73)  X4 21092  2                     9237 1451  106
+   46. D.G.FOSTER JR,ET.AL. (71)  X4 10047 99                     9237 1451  107
+   49. W.P.Abfalterer,      (01)  X4 13753 30                     9237 1451  108
+                                                                  9237 1451  109
+  Selected data for fitting (n,2n) were the following:            9237 1451  110
+   1. J.D.Knight*,ET.AL.   (58)  X4 12459 21                      9237 1451  111
+   3. N.V.Kornilov,ET.AL.  (80)  X4 30561  2                      9237 1451  112
+   5. Chou You-Pu          (78)  X4 30537  2                      9237 1451  113
+   7. Krishichayan*,ET.AL. (15)  X4 99999  1                      9237 1451  114
+   8. J.Frehaut*,ET.AL.    (80)  X4 20416 21                      9237 1451  115
+  12. H.KARIUS,ET.AL.      (79)  X4 20499  2                      9237 1451  116
+  14. A.A.Filatenkov       (16)  X4 41614240                      9237 1451  117
+  15. Xianggao WANG,ET.AL. (10)  X4 32677  2                      9237 1451  118
+  31. Xianggao Wang,ET.AL. (13)  X4 32709  2                      9237 1451  119
+  35. L.R.Veeser,ET.AL.    (78)  X4 10795  4                      9237 1451  120
+  39. C.Konno,ET.AL.       (93)  X4 22637 90                      9237 1451  121
+                                                                  9237 1451  122
+  Selected data for fitting (n,3n) were the following:            9237 1451  123
+      J.Frehaut*,ET.AL.    (80)  X4 20416 22                      9237 1451  124
+      A.Wallner,ET.AL.     (14)  X4 20499 22                      9237 1451  125
+                                                                  9237 1451  126
+- Cross-material covariances were prepared manually from the      9237 1451  127
+  Standards-2017 file. Unrecognised sources of uncertainties      9237 1451  128
+  (USU) of 1.2 percent were added to the cross-covariances of     9237 1451  129
+  the fission cross sections, and of 1.7 percent to the           9237 1451  130
+  capture cross sections between different materials.             9237 1451  131
+- The uncertainties of the delayed neutron multiplicities were    9237 1451  132
+  taken from:                                                     9237 1451  133
+  R. J. Tuttle (1975) Delayed-Neutron Data for Reactor-Physics    9237 1451  134
+  Analysis, Nuclear Science and Engineering, 56:1, 37-71,         9237 1451  135
+  DOI: 10.13182/NSE75-A26620                                      9237 1451  136
+- The initial covariances for the prompt fission neutron          9237 1451  137
+  multiplicities were taken from ENDF/B-VII.1, which originated   9237 1451  138
+  from P. Young least-square fit of available nubar data.         9237 1451  139
+  The following modifications were made:                          9237 1451  140
+  * Below 500 keV no measurements are available. The uncertainty  9237 1451  141
+    was arbitrarily set to 2.5 percent.                           9237 1451  142
+  * An additional 0.4 percent was added over the energy           9237 1451  143
+    intervals 0.5 MeV, 4 MeV, 10 MeV, 20 MeV, 30 MeV to account   9237 1451  144
+    for unrecognized systematic uncertaity of nubar measurements  9237 1451  145
+    as recommended in Standards-2017.                             9237 1451  146
+- The covariances of the P1 elastic scattering component          9237 1451  147
+  as obtained in the prior are available in MF34.                 9237 1451  148
+- The PFNS covariances were evaluated with the spectra, but       9237 1451  149
+  they are given only for the energy range up to 5 MeV in MF35.   9237 1451  150
+                                                                  9237 1451  151
+****************************************************************  9237 1451  152
+General references to the U-238 evaluation:                       9237 1451  153
+1) R. Capote, A. Trkov, M. Sin, M. T. Pigni, V. G. Pronyaev,      9237 1451  154
+   J. Balibrea, D. Bernard, D. Cano-Ott, Y. Danon, A. Daskalakis, 9237 1451  155
+   T. Goricanec, M.W. Herman, B. Kiedrowski, S. Kopecky,          9237 1451  156
+   E. Mendoza, D. Neudecker, L. Leal, G. Noguere,                 9237 1451  157
+   P. Schillebeeckx, I. Sirakov, E. S. Soukhovitskii, I. Stetcu,  9237 1451  158
+   and P.Talou, Nuclear Data Sheets 148 (2018) 254-292            9237 1451  159
+                                                                  9237 1451  160
+2) R. Capote, A. Trkov, M. Sin, M. Herman, A. Daskalakis, and     9237 1451  161
+   Y. Danon, Nuclear Data Sheets 118 (2014) 26-31, 'Physics of    9237 1451  162
+   Neutron Interactions with 238U: New Developments and           9237 1451  163
+   Challenges'                                                    9237 1451  164
+                                                                  9237 1451  165
+References to RR and URR:                                         9237 1451  166
+1) P. Schillebeeckx et al, ND2016, 'Evaluation of neutron induced 9237 1451  167
+   reaction cross sections for 238U in the resonance region'      9237 1451  168
+   EPJ Web of Conf. 146, 02011 (2017).                            9237 1451  169
+                                                                  9237 1451  170
+References to the fast energy region:                             9237 1451  171
+1) R. Capote, A. Trkov, M. Sin, M.W. Herman, and                  9237 1451  172
+   E.Sh. Soukhovitski, EPJ Web of Conferences 69 (2014) 00008,    9237 1451  173
+   'Elastic and inelastic scattering of neutrons on 238U nucleus  9237 1451  174
+2) M. Sin, R. Capote, M. W. Herman, and A.Trkov, Phys. Rev. C 93, 9237 1451  175
+   034605 (2016), 'Extended optical model for fission'            9237 1451  176
+                                                                  9237 1451  177
+References to Validation:                                         9237 1451  178
+1) A.M. Daskalakis et al,  Annals of Nuclear Energy 73 (2014)     9237 1451  179
+   455-464, 'Quasi-differential neutron scattering from 238U      9237 1451  180
+   from 0.5 to 20 MeV'                                            9237 1451  181
+                                                                  9237 1451  182
+ ***************************************************              9237 1451  183
+ FAST ENERGY REGION                                               9237 1451  184
+                                                                  9237 1451  185
+  M Sin,R Capote,A Trkov, b58=b54 (beta4), new sources, HR grid   9237 1451  186
+ ___________________________________________________              9237 1451  187
+                                                                  9237 1451  188
+ Nuclear reaction model code EMPIRE-3.2.3 Malta                   9237 1451  189
+ (SVN rev.  4929; source rev.  4929)                              9237 1451  190
+ by M.W.Herman et al [EMP,EMP-man].                               9237 1451  191
+                                                                  9237 1451  192
+ EMPIRE dimensions (dimension.h):                                 9237 1451  193
+  NDNUC=  50  NDEXCLUS= 10  NDEX= 601  NDLW=  50                  9237 1451  194
+  LEVCC= 30  NDLV= 40  NDBR= 40  NDMSCS= 4                        9237 1451  195
+                                                                  9237 1451  196
+ CROSS-SECTION EVALUATION PROCEDURE                               9237 1451  197
+                                                                  9237 1451  198
+ Adopted procedure is based on careful theoretical                9237 1451  199
+ analysis utilizing available experimental data and               9237 1451  200
+ nuclear reaction model calculations.                             9237 1451  201
+                                                                  9237 1451  202
+ This code integrates into a single system a number               9237 1451  203
+ of important modules and features:                               9237 1451  204
+                                                                  9237 1451  205
+ - Spherical and deformed Optical Model including                 9237 1451  206
+   coupled-channels code ECIS06 by J. Raynal                      9237 1451  207
+ - Soft-rotator deformed Optical Model including                  9237 1451  208
+   coupled-channels code OPTMAN by E.Soukhovitskii                9237 1451  209
+   and coworkers                                                  9237 1451  210
+ - Hauser-Feshbach statistical model including                    9237 1451  211
+   width fluctuation correction, and the                          9237 1451  212
+   optical model for fission with partial damping                 9237 1451  213
+ - Quantum-mechanical MSD TUL model (codes ORION &                9237 1451  214
+   TRISTAN by H.Lenske), and MSC NVWY model                       9237 1451  215
+ - Exciton model with Iwamoto-Harada cluster                      9237 1451  216
+   emission and Kalbach systematic angular distr.                 9237 1451  217
+   (code PCROSS by R.Capote et al)                                9237 1451  218
+ - Hybrid Monte Carlo preequilibrium model(M.Blann)               9237 1451  219
+   (code DDHMS by M.Chadwick, mod. by B.V.Carlson)                9237 1451  220
+ - Complete gamma-ray cascade after emission of                   9237 1451  221
+   each particle, including realistic treatment of                9237 1451  222
+   discrete transitions                                           9237 1451  223
+ - Access to OM segment of the RIPL library [RIPL]                9237 1451  224
+ - Built-in input parameter files, such as masses,                9237 1451  225
+   level density, discrete levels, fission barriers               9237 1451  226
+   and gamma strength functions based on the RIPL                 9237 1451  227
+   library [RIPL]                                                 9237 1451  228
+ - Automatic retrieval of experimental data from the              9237 1451  229
+   EXFOR library                                                  9237 1451  230
+ - ENDF-6 formatting (code EMPEND by A.Trkov)                     9237 1451  231
+   coupled to graphical presentation capabilities                 9237 1451  232
+   (code ZVView by V. Zerkin) through the chain of                9237 1451  233
+   PrePro codes by D. Cullen                                      9237 1451  234
+ - ENDF checking codes (CHECKR, FIZCON, PSYCHE)                   9237 1451  235
+ - Highly automated fitting of optical model                      9237 1451  236
+   parameters (by B.V. Carlson)                                   9237 1451  237
+ - KALMAN code for fitting experimental data and                  9237 1451  238
+ - generating covariances                                         9237 1451  239
+ - Support for NJOY                                               9237 1451  240
+                                                                  9237 1451  241
+                                                                  9237 1451  242
+ PARAMETERIZATIONS                                                9237 1451  243
+                                                                  9237 1451  244
+ Following models and parameters were used in the                 9237 1451  245
+ current evaluation:                                              9237 1451  246
+                                                                  9237 1451  247
+ Discrete levels were taken from the RIPL-3+                      9237 1451  248
+ library based on the 2015 version of ENSDF.                      9237 1451  249
+ Gamma production cross sections not printed                      9237 1451  250
+ ENDF formatting enabled                                          9237 1451  251
+ Exclusive emission from CN and target enabled                    9237 1451  252
+ Exclusive spectra available for residues distant                 9237 1451  253
+   from CN up to 3 neut. or 3 prot.                               9237 1451  254
+ Coupled Channels Method used for Tl calcul. in outgoing ch.      9237 1451  255
+ Exciton model calculations with code PCROSS                      9237 1451  256
+ Cluster emission in terms of the Iwamoto-Harada model            9237 1451  257
+ Kalbach systematics angular distributions (see RIPL-1)           9237 1451  258
+ Mean free path parameter in PCROSS set to  1.8 (Recomm:~1.5)     9237 1451  259
+ HRTW width fluctuation correction calculated  up to  3.00 MeV    9237 1451  260
+ Energy continuum for nucleus 239U  starts at   0.38              9237 1451  261
+ Energy continuum for nucleus 238U  starts at   1.30              9237 1451  262
+ Energy continuum for nucleus 237U  starts at   0.57              9237 1451  263
+ Energy continuum for nucleus 236U  starts at   1.25              9237 1451  264
+ Energy continuum for nucleus 235U  starts at   0.18              9237 1451  265
+ Energy continuum for nucleus 237Pa starts at   0.26              9237 1451  266
+ Energy continuum for nucleus 235Pa starts at   0.37              9237 1451  267
+ Energy continuum for nucleus 233Pa starts at   0.21              9237 1451  268
+ Energy continuum for nucleus 232Th starts at   0.06              9237 1451  269
+ EMPIRE-specific level densities (J>>K aprox.)                    9237 1451  270
+ LDSHIFT  in 238U  set to  1.000                                  9237 1451  271
+ LDSHIFT  in 237U  set to  1.180                                  9237 1451  272
+ LDSHIFT  in 235U  set to  1.110                                  9237 1451  273
+ For all nuclei: fission ignored                                  9237 1451  274
+ For          239 -U  fission induced by light particles          9237 1451  275
+ For          238 -U  fission induced by light particles          9237 1451  276
+ For          237 -U  fission induced by light particles          9237 1451  277
+ For          236 -U  fission induced by light particles          9237 1451  278
+ For          235 -U  fission induced by light particles          9237 1451  279
+ EGSM (J>>K approx.) used for fission LD for all nuclei           9237 1451  280
+ Gamma transm. coeff. in isomeric well for 239U  set to 0.00030   9237 1451  281
+ Total cross section was scaled by factor  0.995                  9237 1451  282
+ CN anisotropy calculated using Blatt-Biedenharn coefficients     9237 1451  283
+ CN decay and Direct cross sections added incoherently            9237 1451  284
+ Traditional Hauser-Feschbach Tlj_{CC}(E)=Tlj_{GS}(E-Egs)         9237 1451  285
+ E1 strength function set to RIPL MLO1                            9237 1451  286
+ GDR parameters from RIPL/Exp.data+Plujko systematics             9237 1451  287
+ Gamma-transition multipolarity set to    2                       9237 1451  288
+                                                                  9237 1451  289
+=============================================================     9237 1451  290
+ Reaction   1n +238U  at incident energy  1.000D-04 MeV (LAB)     9237 1451  291
+=============================================================     9237 1451  292
+                                                                  9237 1451  293
+                                                                  9237 1451  294
+  RIPL GDR parameters used                                        9237 1451  295
+                                                                  9237 1451  296
+            Use of direct and preequilibrium models               9237 1451  297
+            ---------------------------------------               9237 1451  298
+                                                                  9237 1451  299
+ Exit channel    ECIS    MSD    MSC    HMS   PCROSS               9237 1451  300
+                                                                  9237 1451  301
+ neut. disc.       1      0      0      0      0                  9237 1451  302
+ neut. cont.       0      0      0      0      1                  9237 1451  303
+ prot. disc.       0      0      0      0      1                  9237 1451  304
+ prot. cont.       0      0      0      0      1                  9237 1451  305
+ gammas            0      0      0      0      1                  9237 1451  306
+ alpha cont.       0      0      0      0      1                  9237 1451  307
+ deut. cont.       0      0      0      0      1                  9237 1451  308
+ trit. cont.       0      0      0      0      1                  9237 1451  309
+ He-3  cont.       0      0      0      0      1                  9237 1451  310
+ LI    cont.       0      0      0      0      0                  9237 1451  311
+ alpha disc.       0      0      0      0      1                  9237 1451  312
+ deut. disc.       0      0      0      0      1                  9237 1451  313
+ trit. disc.       0      0      0      0      1                  9237 1451  314
+ He-3  disc.       0      0      0      0      1                  9237 1451  315
+                                                                  9237 1451  316
+  Collective levels used in direct calculations                   9237 1451  317
+  N <          30  for coupled levels in CC calculation           9237 1451  318
+  92 238     nucleus is treated as dynamically deformed           9237 1451  319
+                                                                  9237 1451  320
+    Ncoll  Lmax IDef  Kgs  (Def(1,j),j=2,IDef,2)                  9237 1451  321
+      55    8    6   0.0 0.2300E+00 0.5800E-01 -.7800E-02         9237 1451  322
+                                                                  9237 1451  323
+  N   E[MeV]  J   pi 2*K Nc Nb  Dyn.Def.  Interband               9237 1451  324
+  1  0.00000  0.0  1.  0  0  0    0.22400    1.00000              9237 1451  325
+  2  0.04492  2.0  1.  0  0  0    0.22400    1.00000              9237 1451  326
+  3  0.14838  4.0  1.  0  0  0    0.22400    1.00000              9237 1451  327
+  4  0.30718  6.0  1.  0  0  0    0.22400    1.00000              9237 1451  328
+  5  0.51810  8.0  1.  0  0  0    0.22400    1.00000              9237 1451  329
+  6  0.68011  1.0 -1.  0  0  1    0.08600    1.00000              9237 1451  330
+  7  0.73193  3.0 -1.  0  0  1    0.05600    1.00000              9237 1451  331
+  8  0.77590 10.0  1.  0  0  0    0.22400    1.00000              9237 1451  332
+  9  0.82664  5.0 -1.  0  0  1    0.07200    1.00000              9237 1451  333
+ 10  0.92721  0.0  1.  0  0  3    0.01100    1.00000              9237 1451  334
+ 13  0.96613  2.0  1.  0  0  3    0.01100    1.00000              9237 1451  335
+ 14  0.96631  7.0 -1.  0  0  1    0.06300    1.00000              9237 1451  336
+ 15  0.99723  0.0  1.  0  0  2    0.02400    1.00000              9237 1451  337
+ 18  1.03725  2.0  1.  0  0  2    0.02400    1.00000              9237 1451  338
+ 19  1.05638  4.0  1.  0  0  3    0.01100    1.00000              9237 1451  339
+ 22  1.06027  2.0  1.  4  0  4    0.00700    1.00000              9237 1451  340
+ 24  1.10571  3.0  1.  4  0  4    0.00700    1.00000              9237 1451  341
+ 28  1.15070  9.0 -1.  0  0  1    0.05600    1.00000              9237 1451  342
+ 11  0.93055  1.0 -1.  0  0  0    0.00500    1.00000              9237 1451  343
+ 12  0.95012  2.0 -1.  0  0  0    0.00500    1.00000              9237 1451  344
+ 16  0.99758  3.0 -1.  0  0  0    0.00500    1.00000              9237 1451  345
+ 17  1.02800  4.0 -1.  0  0  0    0.00500    1.00000              9237 1451  346
+ 20  1.05773  3.0  1.  0  0  0    0.00500    1.00000              9237 1451  347
+ 21  1.05966  3.0  1.  0  0  0    0.00500    1.00000              9237 1451  348
+ 23  1.07670 12.0  1.  0  0  0    0.01000    1.00000              9237 1451  349
+ 25  1.12880  2.0 -1.  0  0  0    0.00800    1.00000              9237 1451  350
+ 26  1.13075  4.0  1.  0  0  0    0.00500    1.00000              9237 1451  351
+ 27  1.13570  1.0  1.  0  0  0    0.00500    1.00000              9237 1451  352
+ 30  1.16300  4.0  1.  0  0  0    0.00500    1.00000              9237 1451  353
+ 31  1.16799  4.0  1.  0  0  0    0.00500    1.00000              9237 1451  354
+ 32  1.16888  3.0 -1.  0  0  0    0.00500    1.00000              9237 1451  355
+ 52  1.17000  3.0 -1.  0  0  0    0.03809    1.00000              9237 1451  356
+ 53  1.25000  2.0  1.  0  0  0    0.03017    1.00000              9237 1451  357
+ 54  1.44000  3.0 -1.  0  0  0    0.05600    1.00000  cont        9237 1451  358
+ 55  1.59000  3.0 -1.  0  0  0    0.03811    1.00000  cont        9237 1451  359
+ 56  1.75000  3.0 -1.  0  0  0    0.03946    1.00000  cont        9237 1451  360
+ 57  1.85000  3.0 -1.  0  0  0    0.03526    1.00000  cont        9237 1451  361
+ 58  1.95000  3.0 -1.  0  0  0    0.04075    1.00000  cont        9237 1451  362
+ 59  2.15000  3.0 -1.  0  0  0    0.04740    1.00000  cont        9237 1451  363
+ 51  2.30000  3.0 -1.  0  0  0    0.05300    1.00000  cont        9237 1451  364
+ 51  2.39000  4.0  1.  0  0  0    0.00881    1.00000  cont        9237 1451  365
+ 52  2.49000  2.0  1.  0  0  0    0.02512    1.00000  cont        9237 1451  366
+ 53  2.94000  2.0  1.  0  0  0    0.02715    1.00000  cont        9237 1451  367
+ 54  3.18900  2.0  1.  0  0  0    0.02529    1.00000  cont        9237 1451  368
+ 55  3.38800  2.0  1.  0  0  0    0.02507    1.00000  cont        9237 1451  369
+ 56  3.53800  2.0  1.  0  0  0    0.01539    1.00000  cont        9237 1451  370
+ 57  3.63700  2.0  1.  0  0  0    0.01612    1.00000  cont        9237 1451  371
+ 58  3.73700  2.0  1.  0  0  0    0.01647    1.00000  cont        9237 1451  372
+ 59  3.83700  2.0  1.  0  0  0    0.01429    1.00000  cont        9237 1451  373
+ 51  3.90900  2.0  1.  0  0  0    0.01509    1.00000  cont        9237 1451  374
+ 48  4.01600  4.0  1.  0  0  0    0.02500    1.00000  cont        9237 1451  375
+ 69  5.00200  3.0 -1.  0  0  0    0.04300    1.00000  GOR         9237 1451  376
+ 69 10.48900  2.0  1.  0  0  0    0.06600    1.00000  GQR         9237 1451  377
+ 69 12.75000  0.0  1.  0  0  0    0.01200    1.00000  GMR         9237 1451  378
+ 69 18.55700  3.0 -1.  0  0  0    0.07100    1.00000  GOR         9237 1451  379
+                                                                  9237 1451  380
+                                                                  9237 1451  381
+ Total number of nuclei considered :          42                  9237 1451  382
+ Number of exclusive nuclei        :           6                  9237 1451  383
+ Nuclei marked with < below produces inclusive spectra only       9237 1451  384
+                                                                  9237 1451  385
+ Inelastic o. m. parameters: RIPL catalog number         2413     9237 1451  386
+ Neutron   o. m. parameters: RIPL catalog number         2413     9237 1451  387
+ Proton    o. m. parameters: RIPL catalog number         5408     9237 1451  388
+ Alpha     o. m. parameters: RIPL catalog number         9600     9237 1451  389
+ Deuteron  o. m. parameters: RIPL catalog number         6200     9237 1451  390
+ Triton    o. m. parameters: RIPL catalog number         7100     9237 1451  391
+ He-3      o. m. parameters: RIPL catalog number         8100     9237 1451  392
+                                                                  9237 1451  393
+          E j e c t i l e    m a s s e s   [amu]                  9237 1451  394
+                                                                  9237 1451  395
+      1n         1p         4He        2d         3t         3h   9237 1451  396
+                                                                  9237 1451  397
+   1.008665   1.007825   4.002602   2.014101   3.016049   3.0160289237 1451  398
+                                                                  9237 1451  399
+          S e p a r a t i o n   e n e r g i e s [MeV]             9237 1451  400
+                                                                  9237 1451  401
+    Nucleus        1n      1p      4He     2d      3t      3h     9237 1451  402
+                                                                  9237 1451  403
+  92-U -239       4.806   7.484  -3.894  10.203   9.722  10.667   9237 1451  404
+  92-U -238       6.153   7.621  -4.270  11.173   9.970  11.877   9237 1451  405
+  92-U -237       5.126   7.244  -4.232  10.074   9.900  10.154   9237 1451  406
+  92-U -236       6.544   7.172  -4.572  11.031   9.993  11.219   9237 1451  407
+  92-U -235  <    5.298   6.711  -4.679   9.706   9.975   9.461   9237 1451  408
+  91-Pa-238       4.943   6.727  -3.236   8.677   8.436  11.768   9237 1451  409
+  91-Pa-237  <    5.776   5.958  -3.713   9.750   7.923  12.398   9237 1451  410
+  91-Pa-236  <    5.054   6.198  -3.772   8.404   8.338  11.088   9237 1451  411
+  91-Pa-235  <    6.083   5.574  -3.989   9.541   8.070  11.751   9237 1451  412
+  91-Pa-234  <    5.219   5.682  -4.354   8.244   8.424  10.505   9237 1451  413
+  90-Th-235  <    4.430   8.142  99.000  10.384   9.844  11.381   9237 1451  414
+  90-Th-234  <    6.191   8.178  -3.640  11.671  10.251  12.718   9237 1451  415
+  90-Th-233  <    4.786   7.704  -3.869  10.317   9.778  10.746   9237 1451  416
+  90-Th-232  <    6.437   7.755  -4.083  11.249  10.181  11.922   9237 1451  417
+  90-Th-231  <    5.118   7.036  -4.213  10.001  10.030  10.057   9237 1451  418
+  89-Ac-234  <    4.466   6.893  -3.080   8.733   8.243  12.124   9237 1451  419
+  89-Ac-233  <    5.717   6.491  -3.280  10.034   7.996  13.031   9237 1451  420
+  89-Ac-232  <    4.837   6.541  -4.325   8.536   8.241  11.580   9237 1451  421
+  89-Ac-231  <    5.718   5.923  -3.833   9.661   7.976  11.415   9237 1451  422
+  89-Ac-230  <    5.189   6.167  -3.799   8.515   8.565  11.026   9237 1451  423
+                                                                  9237 1451  424
+  < indicates inclusive spectra only                              9237 1451  425
+                                                                  9237 1451  426
+ RESULTS:                                                         9237 1451  427
+ MF=1                                                             9237 1451  428
+    MT=456 nubar adopted from evaluated libraries                 9237 1451  429
+                                                                  9237 1451  430
+ MF=3 Cross sections                                              9237 1451  431
+      EMPIRE calculations were adopted for:                       9237 1451  432
+                                                                  9237 1451  433
+    MT=1 Total                                                    9237 1451  434
+    MT=2 Elastic scattering                                       9237 1451  435
+    MT=4, 51-91 Inelastic scattering                              9237 1451  436
+    MT=102 Capture                                                9237 1451  437
+    MT=16   (n,2n)                                                9237 1451  438
+    MT=17   (n,3n)                                                9237 1451  439
+    MT=18   (n,f)                                                 9237 1451  440
+    MT=28   (n,np+pn)                                             9237 1451  441
+    MT=37   (n,4n)                                                9237 1451  442
+    MT=103, 600-649 (n,p)                                         9237 1451  443
+    MT=104, (n,d)                                                 9237 1451  444
+    MT=105, (n,t)                                                 9237 1451  445
+    MT=106, (n,He-3)                                              9237 1451  446
+    MT=107, 800-849 (n,a)                                         9237 1451  447
+                                                                  9237 1451  448
+ MF=4 Angular distributions                                       9237 1451  449
+      EMPIRE calculations were adopted                            9237 1451  450
+                                                                  9237 1451  451
+ MF=5 Energy distributions                                        9237 1451  452
+    MT=18 PFNS: EMPIRE calculations using                         9237 1451  453
+            Kornilov et al parameterization [KO]                  9237 1451  454
+                                                                  9237 1451  455
+ MF=6 Energy-angle distributions of reaction                      9237 1451  456
+      products; EMPIRE calculations were adopted                  9237 1451  457
+                                                                  9237 1451  458
+ MF=12 Transition probability arrays for photon                   9237 1451  459
+       production; taken from the RIPL library                    9237 1451  460
+                                                                  9237 1451  461
+ MF=14 Photon angular distributions                               9237 1451  462
+       isotropic distributions were assumed                       9237 1451  463
+                                                                  9237 1451  464
+                                                                  9237 1451  465
+ REFERENCES                                                       9237 1451  466
+                                                                  9237 1451  467
+ [EMP]                                                            9237 1451  468
+   M.Herman, R.Capote, B.Carlson, P.Oblozinsky,                   9237 1451  469
+   M.Sin, A.Trkov, H.Wienke and V.Zerkin                          9237 1451  470
+                                                                  9237 1451  471
+  "EMPIRE: Nuclear Reaction Model Code System                     9237 1451  472
+            for data evaluation"                                  9237 1451  473
+   Nuclear Data Sheets 108 (2007) 2655-2715                       9237 1451  474
+                                                                  9237 1451  475
+ [EMP-man]                                                        9237 1451  476
+   M.Herman, R.Capote, A.Trkov, M.Sin, B.Carlson,                 9237 1451  477
+   P.Oblozinsky, C.Mattoon, H.Wienke, S. Hoblit,                  9237 1451  478
+   Young-Sik Cho, G.P.A. Nobre, V.A. Plujko and                   9237 1451  479
+   V.Zerkin                                                       9237 1451  480
+                                                                  9237 1451  481
+  "EMPIRE-3.2 Malta: Modular system for nuclear                   9237 1451  482
+   reaction calculations and data evaluation",                    9237 1451  483
+   EMPIRE users' manual, report INDC(NDS)-0603                    9237 1451  484
+   (IAEA, Vienna, 2013) and BNL-101378-2013                       9237 1451  485
+   (BNL, Upton, NY, USA, 2013)                                    9237 1451  486
+                                                                  9237 1451  487
+ [RIPL]                                                           9237 1451  488
+   R.Capote, M.Herman, P.Oblozinsky, P.G.Young,                   9237 1451  489
+   S.Goriely, T.Belgya, A.V.Ignatyuk, A.J.Koning,                 9237 1451  490
+   S.Hilaire, V.A.Plujko, M.Avrigeanu,                            9237 1451  491
+   Zhigang Ge, Yinlu Han, S.Kailas, J.Kopecky,                    9237 1451  492
+   V.M.Maslov, G.Reffo, M.Sin,                                    9237 1451  493
+   E.Sh.Soukhovitskii and P. Talou                                9237 1451  494
+                                                                  9237 1451  495
+  "RIPL - Reference Input Parameter Library for                   9237 1451  496
+          Calculation of Nuclear Reactions and                    9237 1451  497
+          Nuclear Data Evaluations",                              9237 1451  498
+                                                                  9237 1451  499
+   Nuclear Data Sheets 110 (2009) 3107-3214                       9237 1451  500
+                                                                  9237 1451  501
+   Data available online at                                       9237 1451  502
+    http://www-nds.iaea.org/RIPL-3/                               9237 1451  503
+                                                                  9237 1451  504
+ [MN] D.G.Madland and J.R.Nix,                                    9237 1451  505
+      Nuc. Sci. Eng. 81, (1982) 213                               9237 1451  506
+                                                                  9237 1451  507
+ [KK] N.V.Kornilov, A.B.Kagalenko, F.-J.Hambsch                   9237 1451  508
+      Phys. At. Nuclei 62 (1999) pp 173-185                       9237 1451  509
+                                                                  9237 1451  510
+ ************************************************                 9237 1451  511
+                                                                  9237 1451  512
+                                                                  9237 1451  513
+                                                                  9237 1451  514
+                                                                  9237 1451  515
+ *** ENDRESS - Merging source and resonance ENDF files            9237 1451  516
+  Source ENDF u238.e0                                             9237 1451  517
+  Resonance ENDF IRMM\238U_H20-43_adopNG3+INL46+TOT+NF_12.end     9237 1451  518
+                                                                  9237 1451  519
+** OCTOBER 2016                                                 **9237 1451  520
+** Update of RRR & URR in JEFF33T2 (=JEFF33T0)                  **9237 1451  521
+**                                                              **9237 1451  522
+** Update performed by I.Sirakov (INRNE,Sofia) in collaboration **9237 1451  523
+**        with the EC-JRC Geel, the IAEA (Vienna), and          **9237 1451  524
+**  with support by the OECD Nuclear Energy Agency - NEA (Paris)**9237 1451  525
+**                                                              **9237 1451  526
+** VERSION H20-43 with LSSF=1 and:                              **9237 1451  527
+** - JRC Geel update #2 of the resolved resonance parameters    **9237 1451  528
+**   below 1.2 keV through simultaneous analysis [8] (2016) of  **9237 1451  529
+**   GELINA capture and ORNL transmission data.                 **9237 1451  530
+** - Adoption of four unresolved infinitely dilute cross        **9237 1451  531
+**   sections - capture, inelastic, total and fission.          **9237 1451  532
+**                                                              **9237 1451  533
+**A) Particular URR characteristics of this version:            **9237 1451  534
+** - Lower URR limit at 20 keV.                                 **9237 1451  535
+** - Adoption of the infinitely dilute capture cross section    **9237 1451  536
+**   from the Pronyaev's GMA evaluation on the available (n,g)  **9237 1451  537
+**   data for U-238 [7] (2016).                                 **9237 1451  538
+** - Adoption of the infinitely dilute inelastic cross section  **9237 1451  539
+**   from the neutron scattering evaluation 'ib46' of Capote et **9237 1451  540
+**   al.[4-5] (2016), with a direct inelastic part given by the **9237 1451  541
+**   DCCOM with RIPL 2412 OMP [3-4].                            **9237 1451  542
+** - Adoption of the infinitely dilute total cross section from **9237 1451  543
+**   the Pronyaev's GMA evaluation on the available transmission**9237 1451  544
+**   data for U-238 [6] (2014) (see URR description).           **9237 1451  545
+** - Adoption of the infinitely dilute fission cross section    **9237 1451  546
+**   from the Trkov's estimation on the available sub-threshold **9237 1451  547
+**   fission data for U-238 [9] (2016).                         **9237 1451  548
+**                                                              **9237 1451  549
+**B) Common URR characteristics for all H versions:             **9237 1451  550
+** - Neutron strength functions determined so as to reproduce   **9237 1451  551
+**   the compound absorption cross sections of the DCCOM with   **9237 1451  552
+**   RIPL 2412 OMP [3-4].                                       **9237 1451  553
+** - Hard-sphere scattering radius optimized on the GMA non-    **9237 1451  554
+**   model total cross section evaluation derived by V.Pronyaev **9237 1451  555
+**   [6].                                                       **9237 1451  556
+** - Capture transmission coefficients determined in a fit to   **9237 1451  557
+**   the Pronyaev's GMA non-model capture cross section         **9237 1451  558
+**   evaluation [7].                                            **9237 1451  559
+** - Effective <Gg(l=0)> obtained by extracting the average Gg  **9237 1451  560
+**   from analysis of GELINA data below 1.2 keV [8], and        **9237 1451  561
+**   projecting its value to a mid energy point of 75 keV       **9237 1451  562
+**   through the GDR-model (see URR description). That          **9237 1451  563
+**   represents the main difference with the L-versions, which  **9237 1451  564
+**   <Gg(l=0)> has directly been extracted from the data        **9237 1451  565
+**   analysis below 1.2 keV. The magnitude of such adjustments  **9237 1451  566
+**   in the alternative H- and L-versions ranges up to 0.8 meV  **9237 1451  567
+**   in <Gg(l=0)> and 0.8 eV in D0 retaining the fitted capture **9237 1451  568
+**   transmission coefficients practically intact.              **9237 1451  569
+**                                                              **9237 1451  570
+************************* C O N T E N T S ************************9237 1451  571
+ **************** Program DICTIN (VERSION 2017-1) ****************9237 1451  572
+ **************** Program DICTIN (VERSION 2018-1) ****************9237 1451  573
+ **************** Program DICTIN (VERSION 2018-1) ****************9237 1451  574
+ **************** Program DICTIN (VERSION 2018-1) ****************9237 1451  575
+ **************** Program DICTIN (VERSION 2018-1) ****************9237 1451  576
+ **************** Program DICTIN (VERSION 2018-1) ****************9237 1451  577
+ **************** Program DICTIN (VERSION 2018-1) ****************9237 1451  578
+                                1        451        824          19237 1451  579
+                                3         18        114          19237 1451  580
+                                                                  9237 1  099999
+                                                                  9237 0  0    0
+ 9.223800+4 2.360058+2          0          0          0          09237 3 18    1
+ 1.977860+8 1.977860+8          0          0          1        3339237 3 18    2
+        333          2                                            9237 3 18    3
+ 1.000000-5 0.000000+0 1.000000+3 0.000000+0 2.000000+3 5.000000-59237 3 18    4
+ 5.000000+3 1.000000-5 2.000000+4 5.000000-5 2.000000+4 8.269300-59237 3 18    5
+ 2.006531+4 8.705000-5 2.019594+4 9.946400-5 2.032657+4 1.148900-49237 3 18    6
+ 2.045720+4 1.282500-4 2.058783+4 1.389100-4 2.071846+4 1.466800-49237 3 18    7
+ 2.084909+4 1.516900-4 2.098986+4 1.547200-4 2.100000+4 1.550400-49237 3 18    8
+ 2.106858+4 1.552100-4 2.120574+4 1.549100-4 2.134290+4 1.536500-49237 3 18    9
+ 2.154864+4 1.505000-4 2.189154+4 1.439700-4 2.192816+4 1.422600-49237 3 18   10
+ 2.203593+4 1.404000-4 2.221554+4 1.374500-4 2.293400+4 1.227800-49237 3 18   11
+ 2.300000+4 1.207000-4 2.307511+4 1.192700-4 2.322533+4 1.170300-49237 3 18   12
+ 2.397645+4 1.024500-4 2.400000+4 1.008900-4 2.423514+4 9.768000-59237 3 18   13
+ 2.501890+4 8.330900-5 2.548917+4 7.520100-5 2.580268+4 7.025300-59237 3 18   14
+ 2.595943+4 6.794500-5 2.600000+4 6.660200-5 2.625473+4 6.409800-59237 3 18   15
+ 2.650946+4 6.106900-5 2.684909+4 5.741200-5 2.795290+4 4.654700-59237 3 18   16
+ 2.800000+4 4.547700-5 2.827432+4 4.333200-5 2.909729+4 3.454200-59237 3 18   17
+ 2.946304+4 3.067900-5 2.973737+4 2.790700-5 2.992025+4 2.615900-59237 3 18   18
+ 3.000000+4 2.498100-5 3.009797+4 2.420400-5 3.029392+4 2.299800-59237 3 18   19
+ 3.048986+4 2.153300-5 3.068580+4 2.024300-5 3.088175+4 1.911500-59237 3 18   20
+ 3.089838+4 1.865100-5 3.090762+4 1.859200-5 3.100000+4 1.835500-59237 3 18   21
+ 3.110124+4 1.795000-5 3.150619+4 1.692500-5 3.170866+4 1.659800-59237 3 18   22
+ 3.191114+4 1.644600-5 3.211362+4 1.646100-5 3.231609+4 1.663700-59237 3 18   23
+ 3.251857+4 1.697100-5 3.272104+4 1.746000-5 3.292351+4 1.810100-59237 3 18   24
+ 3.300000+4 1.860900-5 3.332331+4 1.970200-5 3.364661+4 2.126200-59237 3 18   25
+ 3.396992+4 2.289300-5 3.400000+4 2.345600-5 3.433310+4 2.457900-59237 3 18   26
+ 3.455517+4 2.552200-5 3.477725+4 2.637500-5 3.511034+4 2.749500-59237 3 18   27
+ 3.566552+4 2.912700-5 3.588758+4 2.975100-5 3.600000+4 3.022200-59237 3 18   28
+ 3.611757+4 3.055500-5 3.635270+4 3.108400-5 3.682297+4 3.261200-59237 3 18   29
+ 3.717566+4 3.393800-5 3.752836+4 3.543700-5 3.782227+4 3.688100-59237 3 18   30
+ 3.799311+4 3.779600-5 3.799678+4 3.792800-5 3.800254+4 3.839300-59237 3 18   31
+ 3.800646+4 3.848700-5 3.812410+4 3.885000-5 3.837229+4 3.999200-59237 3 18   32
+ 3.874459+4 4.247600-5 3.924098+4 4.610800-5 3.998556+4 5.198200-59237 3 18   33
+ 4.159883+4 6.522700-5 4.161998+4 6.619700-5 4.191390+4 6.757400-59237 3 18   34
+ 4.367738+4 8.185900-5 4.455913+4 8.853400-5 4.485304+4 9.061500-59237 3 18   35
+ 4.500000+4 9.210800-5 4.514696+4 9.308000-5 4.544088+4 9.449500-59237 3 18   36
+ 4.632262+4 9.969100-5 4.764524+4 1.066000-4 4.852698+4 1.106800-49237 3 18   37
+ 4.926177+4 1.134100-4 4.967343+4 1.144700-4 5.016329+4 1.153300-49237 3 18   38
+ 5.048986+4 1.154500-4 5.114300+4 1.151500-4 5.195943+4 1.137600-49237 3 18   39
+ 5.424544+4 1.084500-4 5.477784+4 1.073600-4 5.508981+4 1.069000-49237 3 18   40
+ 5.643692+4 1.057700-4 5.859230+4 1.047800-4 5.949037+4 1.037700-49237 3 18   41
+ 5.984960+4 1.031400-4 6.009797+4 1.024100-4 6.058783+4 1.014400-49237 3 18   42
+ 6.137160+4 9.896200-5 6.254726+4 9.437900-5 6.771400+4 7.175000-59237 3 18   43
+ 6.977141+4 6.258900-5 7.000000+4 6.106600-5 7.022861+4 6.004300-59237 3 18   44
+ 7.068582+4 5.850700-5 7.594361+4 3.497900-5 7.662942+4 3.198100-59237 3 18   45
+ 7.790994+4 2.680400-5 7.817120+4 2.577300-5 7.869372+4 2.384000-59237 3 18   46
+ 7.921623+4 2.206800-5 7.973875+4 2.047900-5 8.000000+4 1.942000-59237 3 18   47
+ 8.026126+4 1.877900-5 8.078378+4 1.792000-5 8.130630+4 1.694200-59237 3 18   48
+ 8.182880+4 1.614000-5 8.235132+4 1.548700-5 8.287384+4 1.495300-59237 3 18   49
+ 8.339636+4 1.450800-5 8.391887+4 1.412700-5 8.470265+4 1.364200-59237 3 18   50
+ 8.548642+4 1.322900-5 8.600894+4 1.300500-5 8.653144+4 1.283500-59237 3 18   51
+ 8.705396+4 1.273900-5 8.749828+4 1.274400-5 8.794260+4 1.284800-59237 3 18   52
+ 8.853042+4 1.310100-5 8.911826+4 1.362500-5 8.970609+4 1.442700-59237 3 18   53
+ 9.000000+4 1.521200-5 9.029391+4 1.584100-5 9.088176+4 1.693800-59237 3 18   54
+ 9.146958+4 1.864100-5 9.205742+4 2.060800-5 9.264524+4 2.279600-59237 3 18   55
+ 9.323307+4 2.515700-5 9.411481+4 2.892800-5 9.676004+4 4.068700-59237 3 18   56
+ 9.793571+4 4.569800-5 9.902029+4 5.015700-5 9.967343+4 5.225800-59237 3 18   57
+ 1.000000+5 5.393800-5 1.003266+5 5.500900-5 1.009797+5 5.652800-59237 3 18   58
+ 1.019595+5 5.928400-5 1.032658+5 6.253600-5 1.058783+5 6.829400-59237 3 18   59
+ 1.078377+5 7.272600-5 1.091440+5 7.602700-5 1.094706+5 7.690600-59237 3 18   60
+ 1.096408+5 7.802600-5 1.100000+5 7.881400-5 1.103592+5 7.988100-59237 3 18   61
+ 1.110777+5 8.155100-5 1.125146+5 8.632500-5 1.146700+5 9.421300-59237 3 18   62
+ 1.168254+5 1.027300-4 1.189807+5 1.119800-4 1.196992+5 1.153000-49237 3 18   63
+ 1.200000+5 1.177100-4 1.207838+5 1.208700-4 1.211757+5 1.223400-49237 3 18   64
+ 1.235270+5 1.347500-4 1.270540+5 1.539500-4 1.290134+5 1.637800-49237 3 18   65
+ 1.297972+5 1.673900-4 1.300000+5 1.695000-4 1.312736+5 1.734000-49237 3 18   66
+ 1.329718+5 1.795400-4 1.350945+5 1.858700-4 1.367927+5 1.898900-49237 3 18   67
+ 1.380663+5 1.921700-4 1.393400+5 1.934000-4 1.400000+5 1.936500-49237 3 18   68
+ 1.413716+5 1.927600-4 1.422860+5 1.908800-4 1.432004+5 1.877100-49237 3 18   69
+ 1.441148+5 1.830200-4 1.450292+5 1.766300-4 1.459436+5 1.684300-49237 3 18   70
+ 1.468580+5 1.585200-4 1.477724+5 1.471400-4 1.486868+5 1.347400-49237 3 18   71
+ 1.490000+5 1.260900-4 1.490322+5 1.238600-4 1.495155+5 1.202400-49237 3 18   72
+ 1.504889+5 1.103400-4 1.514623+5 9.811200-5 1.524356+5 8.752900-59237 3 18   73
+ 1.534090+5 7.894700-5 1.543824+5 7.242900-5 1.553557+5 6.780100-59237 3 18   74
+ 1.563291+5 6.474000-5 1.573025+5 6.286700-5 1.582759+5 6.182400-59237 3 18   75
+ 1.592492+5 6.131600-5 1.600000+5 6.551700-5 1.693228+5 6.564000-59237 3 18   76
+ 2.500000+5 8.800000-5 3.500000+5 1.990000-4 4.500000+5 3.100000-49237 3 18   77
+ 5.000000+5 2.781100-4 5.200000+5 6.579600-4 5.400000+5 6.174000-49237 3 18   78
+ 5.700000+5 6.798300-4 6.000000+5 1.198500-3 6.500000+5 1.325700-39237 3 18   79
+ 7.000000+5 1.896200-3 7.500000+5 2.707500-3 8.000000+5 4.666700-39237 3 18   80
+ 8.500000+5 6.949200-3 9.000000+5 1.416800-2 9.400000+5 1.733300-29237 3 18   81
+ 9.600000+5 1.592300-2 9.800000+5 1.629100-2 1.000000+6 1.459200-29237 3 18   82
+ 1.005000+6 1.754500-2 1.008000+6 1.742200-2 1.020500+6 1.631800-29237 3 18   83
+ 1.035000+6 1.754500-2 1.049500+6 2.085700-2 1.064000+6 2.302900-29237 3 18   84
+ 1.076000+6 2.590800-2 1.091000+6 2.941300-2 1.100000+6 3.102900-29237 3 18   85
+ 1.105500+6 3.229100-2 1.121000+6 3.579600-2 1.138000+6 3.604600-29237 3 18   86
+ 1.154000+6 4.180300-2 1.169500+6 4.380600-2 1.185500+6 4.333200-29237 3 18   87
+ 1.200000+6 4.284800-2 1.220000+6 4.103300-2 1.238500+6 4.248500-29237 3 18   88
+ 1.250000+6 4.430100-2 1.272000+6 5.822000-2 1.291500+6 6.850900-29237 3 18   89
+ 1.311000+6 8.230700-2 1.330500+6 9.905700-2 1.351000+6 1.187200-19237 3 18   90
+ 1.371000+6 1.496500-1 1.391500+6 1.909800-1 1.400000+6 1.940600-19237 3 18   91
+ 1.415000+6 2.254100-1 1.438500+6 2.770100-1 1.459500+6 3.174600-19237 3 18   92
+ 1.481000+6 3.466400-1 1.505500+6 3.639400-1 1.530000+6 3.795000-19237 3 18   93
+ 1.555000+6 3.902500-1 1.580000+6 4.092300-1 1.600000+6 4.257700-19237 3 18   94
+ 1.605500+6 4.246600-1 1.634000+6 4.295900-1 1.660000+6 4.361700-19237 3 18   95
+ 1.686500+6 4.480600-1 1.716000+6 4.688100-1 1.745500+6 4.816400-19237 3 18   96
+ 1.776000+6 4.920300-1 1.800000+6 4.888900-1 1.806500+6 5.024200-19237 3 18   97
+ 1.840000+6 5.185900-1 1.873000+6 5.196100-1 1.905500+6 5.394200-19237 3 18   98
+ 1.940000+6 5.392900-1 1.975500+6 5.405900-1 2.000000+6 5.378600-19237 3 18   99
+ 2.200000+6 5.495700-1 2.400000+6 5.473700-1 2.600000+6 5.427100-19237 3 18  100
+ 2.800000+6 5.393900-1 3.000000+6 5.262400-1 3.600000+6 5.495700-19237 3 18  101
+ 4.000000+6 5.575700-1 4.500000+6 5.626800-1 4.700000+6 5.606300-19237 3 18  102
+ 5.000000+6 5.490400-1 5.300000+6 5.509600-1 5.500000+6 5.476500-19237 3 18  103
+ 5.800000+6 5.674200-1 6.000000+6 6.109800-1 6.200000+6 6.824900-19237 3 18  104
+ 6.500000+6 8.178800-1 7.000000+6 9.439100-1 7.500000+6 9.935100-19237 3 18  105
+ 7.750000+6 9.961000-1 8.000000+6 1.016600+0 8.500000+6 1.014700+09237 3 18  106
+ 9.000000+6 1.016800+0 1.000000+7 1.010400+0 1.100000+7 1.009200+09237 3 18  107
+ 1.150000+7 1.005300+0 1.200000+7 9.877500-1 1.300000+7 1.025300+09237 3 18  108
+ 1.400000+7 1.150600+0 1.450000+7 1.190300+0 1.500000+7 1.241500+09237 3 18  109
+ 1.600000+7 1.315500+0 1.700000+7 1.320300+0 1.800000+7 1.319500+09237 3 18  110
+ 1.900000+7 1.356800+0 2.000000+7 1.405700+0 2.100000+7 1.517900+09237 3 18  111
+ 2.200000+7 1.557900+0 2.300000+7 1.599200+0 2.400000+7 1.545400+09237 3 18  112
+ 2.500000+7 1.576800+0 2.600000+7 1.575600+0 2.700000+7 1.562800+09237 3 18  113
+ 2.800000+7 1.615300+0 2.900000+7 1.603600+0 3.000000+7 1.667300+09237 3 18  114
+                                                                  9237 3  099999
+                                                                  9237 0  0    0
+                                                                     0 0  0    0
+                                                                    -1 0  0    0
